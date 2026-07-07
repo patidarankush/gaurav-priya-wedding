@@ -1,0 +1,9 @@
+Drop your looping background track here and name it exactly:
+
+    wedding-music.mp3
+
+The site auto-loads assets/wedding-music.mp3, loops it, and starts it on the first
+"Tap to open" tap (browsers block autoplay before a tap). The floating music button
+mutes/unmutes. If this file is absent, the site still works silently.
+
+Free sources: Pixabay Music, YouTube Audio Library, Bensound, Uppbeat.
