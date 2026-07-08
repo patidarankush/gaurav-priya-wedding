@@ -86,9 +86,9 @@ body{
 @media(min-width:520px){#device{margin:30px auto;border-radius:30px}.stage{padding:0 14px}}
 
 /* ================= SECTION SCAFFOLD ================= */
-.screen{position:relative;overflow:hidden;isolation:isolate;padding:96px var(--gutter);
+.screen{position:relative;overflow:hidden;isolation:isolate;padding:48px var(--gutter);
   display:flex;flex-direction:column;align-items:center;text-align:center;color:var(--fg)}
-.screen.tight{padding-top:72px}
+.screen.tight{padding-top:36px}
 
 /* eyebrow (roman numeral + label) */
 .eyebrow{display:flex;align-items:center;gap:12px;color:var(--accent);
@@ -154,7 +154,7 @@ body{
   linear-gradient(180deg,#f6eee1 0%,#f2e6d3 12%,#f2e6d3 88%,#efe1cd 100%)}
 .ev-ivory{background:linear-gradient(180deg,#efe4d2,#efe3cf)}
 .s-couple{background:linear-gradient(180deg,#efe1cd 0%,#f2e7d3 12%,#f4e6cc 86%,#f4e2c8 100%)}
-.s-wardrobe{background:linear-gradient(180deg,#14102e 0%,#4a3a48 6%,#a08c7e 11%,#e2d6c2 18%,#efe4d2 34%,#efe4d2 90%,#efe3cf 100%)}
+.s-wardrobe{background:linear-gradient(180deg,#14102e 0px,#4a3a48 18px,#9a8a7c 38px,#e2d6c2 58px,#efe4d2 30%,#efe4d2 90%,#efe3cf 100%)}
 .s-invitation{background:radial-gradient(120% 55% at 50% -4%, #fbf3e6, transparent 55%),
   linear-gradient(180deg,#efe3cf 0%,#f3ead6 14%,#f3ead6 86%,#f0e6d0 100%)}
 .s-family{background:linear-gradient(180deg,#efe3cf 0%,#f4ebd8 50%,#efe3cf 100%)}
@@ -177,10 +177,10 @@ body{
   background:radial-gradient(110% 50% at 50% 12%, rgba(226,150,90,.20), transparent 55%),
     linear-gradient(180deg,#8a4a6e 0%,#4a2360 12%,#2c1147 40%,#261247 82%,#3a2a56 100%)}
 .ev-baraat{--accent:#b8603f;--fg:#4a2233;--fg-soft:#8a5a5a;--hair:rgba(120,90,110,.3);
-  background:linear-gradient(180deg,#3a2a56 0%,#9a90b0 6%,#d5dae4 12%,#e8dfe2 22%,#f0e2d6 82%,#d9b48a 100%)}
+  background:linear-gradient(180deg,#3a2a56 0px,#8a80a8 20px,#cdd3e2 42px,#e8dfe2 64px,#f0e2d6 80%,#d9b48a 100%)}
 .ev-reception{--accent:#e0bd77;--fg:#f2e7cf;--fg-soft:#c3b6d0;--hair:rgba(224,189,119,.26);--plate:rgba(12,18,44,.4);color:#f2e7cf;
-  background:radial-gradient(90% 30% at 50% 6%, rgba(226,180,120,.14), transparent 55%),
-    linear-gradient(180deg,#d9b48a 0%,#8a6a74 7%,#3a2e56 13%,#191340 34%,#120d30 70%,#14102e 100%)}
+  background:radial-gradient(90% 30% at 50% 5%, rgba(226,180,120,.14), transparent 55%),
+    linear-gradient(180deg,#d9b48a 0px,#a0727a 20px,#3a2e56 40px,#191340 56px,#161038 45%,#120d30 72%,#14102e 100%)}
 .ev-rsvp{--accent:#a9803f;--fg:#f3e2c4;--fg-soft:#d8bfa0;
   background:linear-gradient(180deg,#f0e6d0 0%,#ecd0b0 14%,#d1897a 32%,#a5434a 54%,#75242e 76%,#3f0f18 100%)}
 
@@ -363,7 +363,7 @@ html.js [data-reveal-head].in .word{transform:none}
     <section class="screen ev-invocation" data-label="Invocation">
       <div class="flourish" data-reveal><i class="dot"></i><i class="ln"></i><i class="dia"></i><i class="ln r"></i><i class="dot"></i></div>
       <img class="mt-3" data-reveal src="assets/ganesha.webp" alt="Lord Ganesha" width="84" height="84" style="width:80px;filter:drop-shadow(0 6px 16px rgba(169,128,63,.25))">
-      <div class="f-deva mt-1" data-reveal style="font-size:16px;color:var(--gold)">॥ जय झूलेलाल ॥</div>
+      <div class="f-deva mt-1" data-reveal style="font-size:13.5px;line-height:1.75;color:var(--gold);max-width:22em">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</div>
 
       <p class="sub mt-3" data-reveal>With the blessings of the Almighty<br>&amp; in loving memory of</p>
       <p class="prose mt-1" data-reveal style="font-weight:400">Late Smt. Maya Devi &amp; Late Shri Parkashchand Dhanwani<br>Late Shri Ghanshyam Das Keswani</p>
@@ -470,7 +470,7 @@ html.js [data-reveal-head].in .word{transform:none}
     </section>
 
     <!-- BARAAT & PHERE -->
-    <section class="screen ev-baraat tight" data-label="Baraat & Phere" style="padding-top:104px">
+    <section class="screen ev-baraat tight" data-label="Baraat & Phere" style="padding-top:54px">
 
       <div class="roman mt-4" data-reveal>III</div>
       <div class="eyebrow mt-1" data-reveal>Tenu Le Ke Main Jawanga</div>
@@ -497,7 +497,7 @@ html.js [data-reveal-head].in .word{transform:none}
     </section>
 
     <!-- RECEPTION -->
-    <section class="screen ev-reception tight" data-label="Reception" style="padding:120px var(--gutter) 118px">
+    <section class="screen ev-reception tight" data-label="Reception" style="padding:58px var(--gutter) 48px">
       <div class="fx fx-fw" aria-hidden="true">
         <b style="left:24%;top:15%"></b><b style="left:63%;top:9%"></b><b style="left:43%;top:22%"></b><b style="left:80%;top:18%"></b><b style="left:13%;top:12%"></b>
         <span class="star" style="top:7%;left:20%"></span><span class="star" style="top:13%;left:70%"></span><span class="star" style="top:20%;left:40%"></span><span class="star" style="top:6%;left:54%"></span><span class="star" style="top:24%;left:84%"></span><span class="star" style="top:17%;left:9%"></span><span class="star" style="top:11%;left:32%"></span>
@@ -525,7 +525,7 @@ html.js [data-reveal-head].in .word{transform:none}
     </section>
 
     <!-- WARDROBE -->
-    <section class="screen ev-ivory s-wardrobe" data-label="Wardrobe" style="padding-top:122px">
+    <section class="screen ev-ivory s-wardrobe" data-label="Wardrobe" style="padding-top:64px">
       <div class="eyebrow" data-reveal>Dress to Celebrate</div>
       <h2 class="title mt-2" data-reveal-head data-split>Wardrobe</h2>
       <p class="sub mt-2" data-reveal>A little guide to dressing for each celebration.</p>
