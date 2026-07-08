@@ -157,6 +157,13 @@ body{
 .s-wardrobe{background:linear-gradient(180deg,#14102e 0%,#4a3a48 6%,#a08c7e 11%,#e2d6c2 18%,#efe4d2 34%,#efe4d2 90%,#efe3cf 100%)}
 .s-invitation{background:radial-gradient(120% 55% at 50% -4%, #fbf3e6, transparent 55%),
   linear-gradient(180deg,#efe3cf 0%,#f3ead6 14%,#f3ead6 86%,#f0e6d0 100%)}
+.s-family{background:linear-gradient(180deg,#efe3cf 0%,#f4ebd8 50%,#efe3cf 100%)}
+.fam{width:100%;max-width:342px;margin-top:38px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.fam .fh{font-family:'Jost',sans-serif;font-weight:400;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px}
+.fam .fh::before,.fam .fh::after{content:"";width:22px;height:1px;background:currentColor;opacity:.55}
+.fam .fh-hi{font-family:'Tiro Devanagari Sanskrit',serif;font-size:12.5px;color:var(--gold);opacity:.7;margin-top:5px}
+.fam .fnames{margin-top:15px;font-family:'Fraunces',serif;font-weight:360;font-size:16.5px;line-height:1.95;color:var(--fg)}
+.fam .fnote{margin-top:12px;font-family:'Fraunces',serif;font-style:italic;font-size:16px;line-height:1.65;color:var(--fg-soft);max-width:20em}
 
 .ev-haldi{--accent:#c0432f;--fg:#4a1220;--fg-soft:#8a3a3a;--hair:rgba(192,67,47,.22);
   background:radial-gradient(120% 55% at 50% 5%, #ffe6a8, transparent 50%),
@@ -543,6 +550,63 @@ html.js [data-reveal-head].in .word{transform:none}
         <div class="wtop"><h4>Baraat &amp; Reception</h4><span class="swatch"><i style="background:#6d1f2c"></i><i style="background:#0f514a"></i><i style="background:#e6bd63"></i></span></div>
         <div class="wl"><span class="who">Men</span><span class="what">Bandgalas &amp; sherwanis</span></div>
         <div class="wl"><span class="who">Women</span><span class="what">Lehengas &amp; sharara sets</span></div>
+      </div>
+    </section>
+
+    <!-- FAMILY / NAMES -->
+    <section class="screen ev-invocation s-family" data-label="With Love">
+      <div class="flourish" data-reveal><i class="dot"></i><i class="ln"></i><i class="dia"></i><i class="dia f" style="width:5px;height:5px"></i><i class="dia"></i><i class="ln r"></i><i class="dot"></i></div>
+      <h2 class="title mt-3" data-reveal-head data-split>With Love &amp; Blessings</h2>
+      <p class="sub mt-2" data-reveal>From all who hold you dear &mdash; near and far.</p>
+
+      <div class="fam" data-reveal>
+        <div class="fh">Eagerly Awaiting Your Presence</div>
+        <div class="fh-hi">॥ दर्शनाभिलाषी ॥</div>
+        <div class="fnames">
+          Brahmakumari &ndash; Sushila Dhanwani (Katni)<br>
+          Komal &ndash; Shyamlal Dhanwani<br>
+          Usha &ndash; Raju Tekchandani<br>
+          Sneha &ndash; Dheeraj Tekchandani<br>
+          Sharda &ndash; Ramesh Sharma<br>
+          Santosh Dhanwani<br>
+          Late Kamal (Pappu) Dhanwani<br>
+          Pooja &ndash; Vishal Dhanwani<br>
+          Sneha &ndash; Dheeraj Tekchandani<br>
+          Jaanvi &ndash; Pratik Sharma
+        </div>
+      </div>
+
+      <div class="fam" data-reveal>
+        <div class="fh">With Humble Regards</div>
+        <div class="fh-hi">॥ विनीत ॥</div>
+        <div class="fnames">
+          Khwahish &ndash; Prashant Dhanwani<br>
+          &amp; the entire Dhanwani family
+        </div>
+      </div>
+
+      <div class="fam" data-reveal>
+        <div class="fh">The Maternal Family</div>
+        <div class="fh-hi">॥ ननिहाल पक्ष ॥</div>
+        <div class="fnames">
+          Kaushalya &ndash; Late Chandrakumar Keswani<br>
+          Anita &ndash; Late Ashok Nawlani (USA)<br>
+          Muskaan &ndash; Ajay Keswani<br>
+          Payal &ndash; Vijay Keswani<br>
+          Sapna &ndash; Sonu Lalwani (Neemuch)<br>
+          Keri &ndash; Rohit Nawlani (USA)<br>
+          Pooja Nawlani &middot; Disha Keswani<br>
+          Jai Keswani &middot; Garima Keswani<br>
+          Hitesh Keswani &middot; Dev Lalwani<br>
+          Dhruv Lalwani
+        </div>
+      </div>
+
+      <div class="fam" data-reveal>
+        <div class="fh">A Special Invitation</div>
+        <div class="fh-hi">॥ विशेष आमंत्रण ॥</div>
+        <div class="fnote">&ldquo;Do come, do come to Mele &amp; Goru&rsquo;s wedding &mdash; without fail!&rdquo;</div>
+        <div class="label" style="margin-top:12px;color:var(--gold)">&mdash; Yunay (Yonu)</div>
       </div>
     </section>
 
