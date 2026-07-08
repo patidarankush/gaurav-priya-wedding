@@ -160,7 +160,12 @@ body{
 
 .ev-haldi{--accent:#c0432f;--fg:#4a1220;--fg-soft:#8a3a3a;--hair:rgba(192,67,47,.22);
   background:radial-gradient(120% 55% at 50% 5%, #ffe6a8, transparent 50%),
-    linear-gradient(180deg,#f4e2c8 0%,#f9d7a0 14%,#f4ad8c 46%,#ea90a0 72%,#c56884 88%,#8a4a6e 100%)}
+    linear-gradient(180deg,#f4e2c8 0%,#f9d7a0 12%,#f4b892 32%,#ec86a6 52%,#cf4c8c 68%,#a83a76 86%,#8a4a6e 100%)}
+/* Haldi details sit on the deep-magenta lower band -> use light text for contrast */
+.ev-haldi .details .d-lab{color:#ffd9a0}
+.ev-haldi .details .d-val{color:#fff5ec}
+.ev-haldi .details .d-hair{background:rgba(255,236,214,.32)}
+.ev-haldi .details .d-link{color:#ffdca6;border-color:rgba(255,217,160,.75)}
 .ev-sufi{--accent:#e2b45e;--fg:#f3e6cf;--fg-soft:#cdb4d6;--hair:rgba(226,180,94,.28);--plate:rgba(30,14,42,.4);color:#f3e6cf;
   background:radial-gradient(110% 50% at 50% 12%, rgba(226,150,90,.20), transparent 55%),
     linear-gradient(180deg,#8a4a6e 0%,#4a2360 12%,#2c1147 40%,#261247 82%,#3a2a56 100%)}
@@ -331,7 +336,6 @@ html.js [data-reveal-head].in .word{transform:none}
     <div class="scrim"></div>
     <div class="cinner">
       <div class="cov-top">
-        <img class="cov-ganesha" src="assets/ganesha.webp" alt="Lord Ganesha" width="74" height="74">
         <div class="f-deva" style="font-size:14px;letter-spacing:.05em;color:var(--gold-foil)">॥ जय झूलेलाल ॥</div>
       </div>
       <div class="cov-mid">
