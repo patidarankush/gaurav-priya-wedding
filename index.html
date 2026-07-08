@@ -309,12 +309,11 @@ body{
   box-shadow:0 8px 22px rgba(0,0,0,.4);transition:transform .3s var(--e-out)}
 #music:hover{transform:scale(1.06)}
 @media(max-width:460px){#music{right:18px}}
-#music .ic{width:15px;height:15px;color:var(--gold-foil)}
-#music .bars{display:flex;align-items:flex-end;gap:2px;height:14px}
-#music .bars i{width:2px;background:var(--gold-foil);height:5px;border-radius:1px}
-#music.on .bars i{animation:eq .9s ease-in-out infinite}
-#music.on .bars i:nth-child(2){animation-delay:.2s}#music.on .bars i:nth-child(3){animation-delay:.4s}#music.on .bars i:nth-child(4){animation-delay:.1s}
-@keyframes eq{0%,100%{height:4px}50%{height:14px}}
+#music .ic{width:19px;height:19px;color:var(--gold-foil);display:none}
+#music .ic-off{display:block}          /* default (paused) -> muted icon */
+#music.on .ic-off{display:none}
+#music.on .ic-on{display:block}        /* playing -> volume icon */
+#music.on{border-color:var(--gold-foil)}
 
 /* ================= REVEAL (CSS transitions + IntersectionObserver — no rAF dependency) ================= */
 html.js [data-reveal]{opacity:0;transform:translateY(30px);
@@ -638,10 +637,11 @@ html.js [data-reveal-head].in .word{transform:none}
 </div>
 
 <!-- music -->
-<button id="music" aria-label="Play or pause background music">
-  <span class="bars"><i></i><i></i><i></i><i></i></span>
+<button id="music" aria-label="Turn music on or off" aria-pressed="false">
+  <svg class="ic ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+  <svg class="ic ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>
 </button>
-<audio id="bgm" loop preload="none" playsinline><source src="assets/wedding-music.mp3" type="audio/mpeg"></audio>
+<audio id="bgm" loop preload="auto" playsinline><source src="assets/webmp3.mp3" type="audio/mpeg"></audio>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
@@ -730,8 +730,8 @@ html.js [data-reveal-head].in .word{transform:none}
   /* -------- music -------- */
   var bgm=document.getElementById('bgm'), mbtn=document.getElementById('music'), musicReady=true;
   bgm.addEventListener('error',function(){ musicReady=false; });
-  bgm.addEventListener('playing',function(){ mbtn.classList.add('on'); });
-  bgm.addEventListener('pause',function(){ mbtn.classList.remove('on'); });
+  bgm.addEventListener('playing',function(){ mbtn.classList.add('on'); mbtn.setAttribute('aria-pressed','true'); });
+  bgm.addEventListener('pause',function(){ mbtn.classList.remove('on'); mbtn.setAttribute('aria-pressed','false'); });
   function playMusic(){ if(!musicReady) return; var p=bgm.play(); if(p&&p.catch) p.catch(function(){}); }
   mbtn.addEventListener('click',function(){ if(bgm.paused){ musicReady=true; playMusic(); } else { bgm.pause(); } });
 
